@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sadeem Alshuaibi | Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container nav">
+        <h1 class="logo">Sadeem Alshuaibi</h1>
+
+        <nav class="links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button id="themeToggle" class="btn">☀️ Light Mode</button>
+    </div>
+</header>
+
+<main>
+
+    <section id="about" class="hero">
+        <div class="container hero-grid">
+
+            <div class="hero-text">
+                <h2 class="title">Hello, I’m <span>Sadeem Alshuaibi</span></h2>
+                <p class="subtitle">
+                    I am a Software Engineering student at KFUPM passionate about using technology to solve real-world problems.
+                    I continuously work on developing my technical skills and expanding my knowledge.
+                    I value teamwork and believe collaboration leads to more innovative and successful projects.
+                </p>
+            </div>
+
+            <div class="hero-photo">
+                <div class="circle">
+                    <img src="assets/images/myphoto.jpg" alt="My photo">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- my skills -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills-grid">
+                <div class="skill-card">Java Programming</div>
+                <div class="skill-card">Python Programming</div>
+                <div class="skill-card">Teamwork</div>
+                <div class="skill-card">Microsoft Office</div>
+                <div class="skill-card">Independent Learning</div>
+                <div class="skill-card">Problem Solving</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- my projects -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="projects-grid">
+
+
+                <article class="card">
+                    <div class="project-header">
+                        <img src="assets/images/treasure.png" alt="TreasureQuest icon">
+                        <h3>TreasureQuest</h3>
+                    </div>
+
+                    <p>
+                        TreasureQuest is a Java program that computes the shortest safe path
+                        from a starting point to a destination on a grid while avoiding walls
+                        and monster-monitored areas using pathfinding algorithms.
+                    </p>
+                </article>
+
+
+                <article class="card">
+                    <div class="project-header">
+                        <img src="assets/images/library.png" alt="Library Management icon">
+                        <h3>Library Management System</h3>
+                    </div>
+
+                    <p>
+                        A Python-based system designed to manage library operations including
+                        adding, updating, deleting, and searching books.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+
+            <form id="contactForm" class="card form">
+                <label>
+                    Name
+                    <input type="text" required>
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" required>
+                </label>
+
+                <label>
+                    Message
+                    <textarea rows="5" required></textarea>
+                </label>
+
+                <button class="btn primary" type="submit">Send</button>
+                <p id="formMessage" class="small"></p>
+            </form>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p class="small">© <span id="year"></span> Saudi Arabia</p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
