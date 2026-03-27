@@ -71,7 +71,7 @@ Purpose: Enhances user experience and visual feedback
 
 
 
-## ⚠Error Handling
+## Error Handling
 - Displays messages for invalid form input
 - Shows "No projects found" for empty search
 - Ensures users always receive feedback
