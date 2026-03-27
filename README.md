@@ -1,17 +1,69 @@
-# Assignment 1 / Personal Portfolio
+## Personal Portfolio Website – Assignment 2
 
-A simple responsive portfolio website built with HTML, CSS, and JavaScript.
+##  Project Description
+This project is a personal portfolio website developed as part of Assignment 2. It builds on Assignment 1 by adding interactivity, dynamic behavior, and improved user experience using JavaScript.
 
-## Features
-- About, Projects, Contact sections
-- Responsive layout (mobile/tablet/desktop)
-- Dark/Light mode toggle (JavaScript)
-- Contact form interaction (no backend)
+The website includes sections such as About, Skills, Projects, and Contact, and demonstrates modern web development practices.
 
-## How to Run
+
+##  Features
+- 🌗 Theme toggle (dark/light mode) using localStorage
+- 🔍 Live project search and filtering
+- ✨ Dynamic motivational quotes (button interaction)
+- 📩 Contact form with validation and success message
+- ⚠️ Error messages for invalid inputs
+- 📭 Empty state message ("No projects found")
+-  Smooth animations and scroll reveal effects
+
+
+
+## Technologies Used
+- HTML5
+- CSS3
+- JavaScript
+
+
+##  Project Structure
+assignment-2/
+├── README.md
+├── index.html
+├── css/
+│ └── styles.css
+├── js/
+│ └── script.js
+├── assets/
+│ └── images/
+├── docs/
+│ ├── ai-usage-report.md
+│ └── technical-documentation.md
+└── .gitignore
+
+
+
+
+## How to Run the Project
 1. Download or clone the repository
-2. Open `index.html` in your browser
+2. Open the folder
+3. Open `index.html` in your browser
 
-## AI Usage
-I used AI tools to help generate a starter layout, improve CSS responsiveness, and review JavaScript logic.
-More details: `docs/ai-usage-report.md`.
+
+
+
+##  AI Usage Summary
+AI tools such as ChatGPT were used to:
+- Debug JavaScript issues
+- Improve code structure and readability
+- assisting to add interactive features (search, validation, theme toggle)
+
+More details are available in:  
+`docs/ai-usage-report.md`
+
+
+## Learning Outcomes
+- Learned how to use JavaScript for dynamic interactivity
+- Understood how localStorage saves user preferences
+- Improved skills in form validation and user input handling
+- Enhanced user experience using animations and feedback
+
+
+

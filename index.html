@@ -6,7 +6,6 @@
     <title>Sadeem Alshuaibi | Portfolio</title>
     <link rel="stylesheet" href="css/styles.css" />
 </head>
-
 <body>
 
 <header class="site-header">
@@ -28,7 +27,6 @@
 
     <section id="about" class="hero">
         <div class="container hero-grid">
-
             <div class="hero-text">
                 <h2 class="title">Hello, I’m <span>Sadeem Alshuaibi</span></h2>
                 <p class="subtitle">
@@ -43,11 +41,9 @@
                     <img src="assets/images/myphoto.jpg" alt="My photo">
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- my skills -->
     <section id="skills" class="section">
         <div class="container">
             <h2 class="section-title">Skills</h2>
@@ -63,20 +59,25 @@
         </div>
     </section>
 
-    <!-- my projects -->
     <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title">Projects</h2>
 
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="projectSearch" placeholder="Search projects..." autocomplete="off" />
+                <button id="clearSearch" class="clear-btn" hidden>✕</button>
+            </div>
+
             <div class="projects-grid">
-
-
-                <article class="card">
+                <article class="card" data-tags="java pathfinding algorithm grid">
                     <div class="project-header">
                         <img src="assets/images/treasure.png" alt="TreasureQuest icon">
-                        <h3>TreasureQuest</h3>
+                        <div>
+                            <h3>TreasureQuest</h3>
+                            <span class="tag">Java</span>
+                        </div>
                     </div>
-
                     <p>
                         TreasureQuest is a Java program that computes the shortest safe path
                         from a starting point to a destination on a grid while avoiding walls
@@ -84,20 +85,37 @@
                     </p>
                 </article>
 
-
-                <article class="card">
+                <article class="card" data-tags="python library management system search">
                     <div class="project-header">
                         <img src="assets/images/library.png" alt="Library Management icon">
-                        <h3>Library Management System</h3>
+                        <div>
+                            <h3>Library Management System</h3>
+                            <span class="tag">Python</span>
+                        </div>
                     </div>
-
                     <p>
                         A Python-based system designed to manage library operations including
                         adding, updating, deleting, and searching books.
                     </p>
                 </article>
-
             </div>
+
+            <p id="noResults" class="no-results" hidden>No projects found. Try a different keyword.</p>
+        </div>
+    </section>
+
+    <section id="fun-fact" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Daily Motivation</h2>
+            <p class="small reveal motivation-subtitle">A little reminder to keep going. ✨</p>
+
+            <div class="card fact-card reveal" id="factCard">
+                <p id="factText"></p>
+            </div>
+
+            <button class="btn primary reveal" id="newFactBtn">
+                ✨ New Quote
+            </button>
         </div>
     </section>
 
@@ -108,21 +126,26 @@
             <form id="contactForm" class="card form">
                 <label>
                     Name
-                    <input type="text" required>
+                    <input type="text" id="nameInput" required>
+                    <span id="nameError" class="field-error"></span>
                 </label>
 
                 <label>
                     Email
-                    <input type="email" required>
+                    <input type="email" id="emailInput" required>
+                    <span id="emailError" class="field-error"></span>
                 </label>
 
                 <label>
                     Message
-                    <textarea rows="5" required></textarea>
+                    <textarea id="msgInput" rows="5" required></textarea>
+                    <span id="msgError" class="field-error"></span>
                 </label>
 
                 <button class="btn primary" type="submit">Send</button>
-                <p id="formMessage" class="small"></p>
+                <p id="formMessage" class="form-success" hidden>
+                    Your message has been sent successfully.
+                </p>
             </form>
         </div>
     </section>
