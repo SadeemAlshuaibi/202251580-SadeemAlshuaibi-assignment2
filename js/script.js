@@ -1,7 +1,6 @@
-// ── Year ──────────────────────────────────────────────
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// ── Theme Toggle (localStorage) ───────────────────────
+// Theme Toggle
 const toggle = document.getElementById("themeToggle");
 const savedTheme = localStorage.getItem("theme") || "dark";
 
@@ -23,7 +22,7 @@ toggle.addEventListener("click", () => {
     applyTheme(newTheme);
 });
 
-// ── Live Project Search ────────────────────────────────
+// Live Project Search
 const searchInput = document.getElementById("projectSearch");
 const clearBtn = document.getElementById("clearSearch");
 const cards = document.querySelectorAll(".card[data-tags]");
@@ -56,7 +55,7 @@ function filterProjects() {
     noResults.hidden = visible > 0;
 }
 
-// ── Daily Motivation ───────────────────────────────────
+// Daily Motivation
 const quotes = [
     "Every expert was once a beginner. Keep learning. 🌱",
     "Small steps every day lead to big results over time. 🚀",
@@ -95,7 +94,7 @@ function showQuote() {
 showQuote();
 newFactBtn.addEventListener("click", showQuote);
 
-// ── Contact Form Validation ────────────────────────────
+// Contact Form Validation
 const form = document.getElementById("contactForm");
 const nameInput = document.getElementById("nameInput");
 const emailInput = document.getElementById("emailInput");
@@ -187,7 +186,6 @@ function clearErr(field) {
     if (el) el.textContent = "";
 }
 
-// ── Scroll Reveal ──────────────────────────────────────
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {

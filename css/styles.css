@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* ── CSS Variables ── */
 :root {
     --bg: #0f172a;
     --card: #1e293b;
@@ -11,7 +10,7 @@
     --input-bg: rgba(255,255,255,.04);
 }
 
-/* ── Light Mode ── */
+/* Light Mode */
 body.light {
     --bg: #f4f6f8;
     --card: #ffffff;
@@ -43,7 +42,6 @@ body {
     margin: 0 auto;
 }
 
-/* ── Header ── */
 .site-header {
     position: sticky;
     top: 0;
@@ -96,7 +94,6 @@ body {
     border: none;
 }
 
-/* ── Hero ── */
 .hero {
     background: linear-gradient(135deg, #5f6df0, #7b4ce2);
     color: white;
@@ -146,7 +143,6 @@ body {
     object-fit: cover;
 }
 
-/* ── Sections ── */
 .section {
     padding: 70px 0;
 }
@@ -156,7 +152,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* ── Skills ── */
+/* Skills */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -178,7 +174,7 @@ body {
     border-color: var(--primary);
 }
 
-/* ── Projects ── */
+/* Projects */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -216,7 +212,6 @@ body {
     margin: 0 0 6px;
 }
 
-/* ── Tags ── */
 .tag {
     display: inline-block;
     font-size: 11px;
@@ -228,7 +223,7 @@ body {
     margin-right: 4px;
 }
 
-/* ── Search Bar ── */
+/* Search Bar */
 .search-bar {
     display: flex;
     align-items: center;
@@ -280,7 +275,7 @@ body {
     font-size: 15px;
 }
 
-/* ── Motivation / Fact Card ── */
+/* Motivation */
 .motivation-subtitle {
     margin-bottom: 16px;
 }
@@ -315,7 +310,7 @@ body {
     }
 }
 
-/* ── Contact Form ── */
+/* Contact Form */
 .form {
     max-width: 450px;
     margin: 0 auto;
@@ -374,7 +369,6 @@ textarea.invalid {
     animation: fadeIn .4s ease;
 }
 
-/* ── Footer ── */
 .site-footer {
     border-top: 1px solid var(--border);
     padding: 20px 0;
@@ -385,7 +379,6 @@ textarea.invalid {
     font-size: 14px;
 }
 
-/* ── Scroll Reveal ── */
 .reveal {
     opacity: 0;
     transform: translateY(20px);
@@ -397,7 +390,6 @@ textarea.invalid {
     transform: translateY(0);
 }
 
-/* ── Responsive ── */
 @media (max-width: 768px) {
     .hero-grid {
         grid-template-columns: 1fr;
