@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<header class="site-header">git status
+<header class="site-header">
     <div class="container nav">
         <h1 class="logo">Sadeem Alshuaibi</h1>
 
@@ -16,6 +16,7 @@
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#github">GitHub</a>
             <a href="#contact">Contact</a>
         </nav>
 
@@ -24,21 +25,30 @@
 </header>
 
 <main>
-
     <section id="about" class="hero">
         <div class="container hero-grid">
             <div class="hero-text">
-                <h2 class="title">Hello, I’m <span>Sadeem Alshuaibi</span></h2>
+                <h2 class="title">Hello, I'm <span>Sadeem Alshuaibi</span></h2>
                 <p class="subtitle">
-                    I am a Software Engineering student at KFUPM passionate about using technology to solve real-world problems.
-                    I continuously work on developing my technical skills and expanding my knowledge.
-                    I value teamwork and believe collaboration leads to more innovative and successful projects.
+                    I am a Software Engineering student at KFUPM passionate about using technology
+                    to solve real-world problems. I enjoy learning, building projects, and improving
+                    my technical skills through practice and collaboration.
                 </p>
+
+                <div class="visitor-box">
+                    <label for="visitorName">Your Name</label>
+                    <div class="visitor-row">
+                        <input type="text" id="visitorName" placeholder="Enter your name" />
+                        <button id="saveNameBtn" class="btn primary" type="button">Save</button>
+                    </div>
+                    <p id="visitorGreeting" class="small"></p>
+                </div>
+
             </div>
 
             <div class="hero-photo">
                 <div class="circle">
-                    <img src="assets/images/myphoto.jpg" alt="My photo">
+                    <img src="assets/images/myphoto.jpg" alt="My photo" />
                 </div>
             </div>
         </div>
@@ -51,10 +61,10 @@
             <div class="skills-grid">
                 <div class="skill-card">Java Programming</div>
                 <div class="skill-card">Python Programming</div>
-                <div class="skill-card">Teamwork</div>
-                <div class="skill-card">Microsoft Office</div>
-                <div class="skill-card">Independent Learning</div>
+                <div class="skill-card">HTML, CSS, JavaScript</div>
                 <div class="skill-card">Problem Solving</div>
+                <div class="skill-card">Teamwork</div>
+                <div class="skill-card">Independent Learning</div>
             </div>
         </div>
     </section>
@@ -63,44 +73,106 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
 
-            <div class="search-bar">
-                <span class="search-icon">🔍</span>
-                <input type="text" id="projectSearch" placeholder="Search projects..." autocomplete="off" />
-                <button id="clearSearch" class="clear-btn" hidden>✕</button>
+            <div class="controls">
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="projectSearch" placeholder="Search projects..." autocomplete="off" />
+                    <button id="clearSearch" class="clear-btn" hidden>✕</button>
+                </div>
+
+                <div class="filters">
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="web">Web</option>
+                        <option value="java">Java</option>
+                        <option value="python">Python</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+
+                    <select id="sortProjects">
+                        <option value="default">Sort: Default</option>
+                        <option value="level-asc">Level: Beginner First</option>
+                        <option value="level-desc">Level: Advanced First</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="projects-grid">
-                <article class="card" data-tags="java pathfinding algorithm grid">
+            <div id="projectsGrid" class="projects-grid">
+                <article class="card project-card"
+                         data-title="TreasureQuest"
+                         data-category="java advanced"
+                         data-level="2"
+                         data-tags="java pathfinding algorithm grid advanced">
                     <div class="project-header">
-                        <img src="assets/images/treasure.png" alt="TreasureQuest icon">
+                        <img src="assets/images/treasure.png" alt="TreasureQuest icon" />
                         <div>
                             <h3>TreasureQuest</h3>
-                            <span class="tag">Java</span>
+                            <div class="tag-row">
+                                <span class="tag">Java</span>
+                                <span class="tag">Advanced</span>
+                            </div>
                         </div>
                     </div>
                     <p>
                         TreasureQuest is a Java program that computes the shortest safe path
-                        from a starting point to a destination on a grid while avoiding walls
-                        and monster-monitored areas using pathfinding algorithms.
+                        on a grid while avoiding walls and danger areas using pathfinding logic.
                     </p>
                 </article>
 
-                <article class="card" data-tags="python library management system search">
+                <article class="card project-card"
+                         data-title="Library Management System"
+                         data-category="python beginner"
+                         data-level="1"
+                         data-tags="python library management system search beginner">
                     <div class="project-header">
-                        <img src="assets/images/library.png" alt="Library Management icon">
+                        <img src="assets/images/library.png" alt="Library Management icon" />
                         <div>
                             <h3>Library Management System</h3>
-                            <span class="tag">Python</span>
+                            <div class="tag-row">
+                                <span class="tag">Python</span>
+                                <span class="tag">Beginner</span>
+                            </div>
                         </div>
                     </div>
                     <p>
-                        A Python-based system designed to manage library operations including
-                        adding, updating, deleting, and searching books.
+                        A Python-based system for managing books with features such as adding,
+                        updating, deleting, and searching records.
+                    </p>
+                </article>
+
+                <article class="card project-card"
+                         data-title="Portfolio Website"
+                         data-category="web beginner"
+                         data-level="1"
+                         data-tags="web html css javascript portfolio responsive beginner">
+                    <div class="project-header">
+                        <div>
+                            <h3>Portfolio Website</h3>
+                            <div class="tag-row">
+                                <span class="tag">Web</span>
+                                <span class="tag">Beginner</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        A personal portfolio website built with HTML, CSS, and JavaScript
+                        featuring responsive design, theme toggle, and interactive sections.
                     </p>
                 </article>
             </div>
 
-            <p id="noResults" class="no-results" hidden>No projects found. Try a different keyword.</p>
+            <p id="noResults" class="no-results" hidden>No projects found. Try a different search or filter.</p>
+        </div>
+    </section>
+
+    <section id="github" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">GitHub Projects</h2>
+            <p class="small reveal">These repositories are loaded dynamically from the GitHub API.</p>
+
+            <div id="apiStatus" class="api-status reveal">Loading GitHub repositories...</div>
+            <div id="githubRepos" class="projects-grid reveal"></div>
         </div>
     </section>
 
@@ -109,13 +181,11 @@
             <h2 class="section-title reveal">Daily Motivation</h2>
             <p class="small reveal motivation-subtitle">A little reminder to keep going. ✨</p>
 
-            <div class="card fact-card reveal" id="factCard">
+            <div class="card fact-card reveal">
                 <p id="factText"></p>
             </div>
 
-            <button class="btn primary reveal" id="newFactBtn">
-                ✨ New Quote
-            </button>
+            <button class="btn primary reveal" id="newFactBtn" type="button">✨ New Quote</button>
         </div>
     </section>
 
@@ -123,39 +193,51 @@
         <div class="container">
             <h2 class="section-title">Contact</h2>
 
-            <form id="contactForm" class="card form">
+            <form id="contactForm" class="card form" novalidate>
                 <label>
                     Name
-                    <input type="text" id="nameInput" required>
+                    <input type="text" id="nameInput" />
                     <span id="nameError" class="field-error"></span>
                 </label>
 
                 <label>
                     Email
-                    <input type="email" id="emailInput" required>
+                    <input type="email" id="emailInput" />
                     <span id="emailError" class="field-error"></span>
                 </label>
 
                 <label>
                     Message
-                    <textarea id="msgInput" rows="5" required></textarea>
+                    <textarea id="msgInput" rows="5"></textarea>
                     <span id="msgError" class="field-error"></span>
                 </label>
 
                 <button class="btn primary" type="submit">Send</button>
+
                 <p id="formMessage" class="form-success" hidden>
                     Your message has been sent successfully.
                 </p>
             </form>
         </div>
+
     </section>
 
+
+    <section class="section">
+        <div class="container">
+            <div class="timer-box">
+                <p class="small">Time spent on this site:</p>
+                <p id="timeCounter" class="timer">0 seconds</p>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer class="site-footer">
     <div class="container">
         <p class="small">© <span id="year"></span> Saudi Arabia</p>
     </div>
+
 </footer>
 
 <script src="js/script.js"></script>
